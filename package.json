@@ -1,0 +1,35 @@
+{
+  "name": "node-rovi",
+  "version": "0.0.1",
+  "author": {
+    "name": "Peter Henning",
+    "email": "petreboy14@gmail.com"
+  },
+  "description": "A wrapper around the entertainment based Rovi API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petreboy14/node-rovi.git"
+  },
+  "main": "./index.js",
+  "dependencies": {
+    "hyperquest": "~0.1.7"
+  },
+  "devDependencies": {
+    "should": "~1.2.2",
+    "lab": "~1.0.0"
+  },
+  "keywords": [
+    "rovi",
+    "music",
+    "tv",
+    "video",
+    "artists",
+    "celebrities"
+  ],
+  "engines": {
+    "node": ">=0.6.x"
+  },
+  "scripts": {
+    "test": "node_modules/lab/bin/lab -g 0 test"
+  }
+}
