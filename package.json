@@ -12,7 +12,8 @@
   },
   "main": "./index.js",
   "dependencies": {
-    "hyperquest": "~0.1.7"
+    "hyperquest": "~0.1.7",
+    "concat-stream": "~1.0.1"
   },
   "devDependencies": {
     "should": "~1.2.2",
