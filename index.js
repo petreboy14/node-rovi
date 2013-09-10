@@ -14,9 +14,19 @@ var Rovi = function(config) {
 
 for (var key in api) {
   if (api.hasOwnProperty(key)) {
-    Rovi.prototype[api[key].method] = function(options, cb) {
-      return roviRequest.makeRequest(this.key, this.secret, options, cb);
+    for (var key2 in api[key]) {
+      if (api[key].hasOwnProperty(key2)) {
+        var map = api[key][key2];
+        Rovi.prototype[map.method] = function(options, cb) {
+          if (typeof(options) === 'function') {
+            cb = options;
+            options = {};
+          }
+          return roviRequest.makeRequest(this.key, this.secret, options, map, cb);
+        }
+      }
     }
+
   }
 }
 
